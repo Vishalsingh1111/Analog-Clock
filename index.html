@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> 
+    <link rel="stylesheet" href="style.css">
+    <title>Analog clock</title>
+</head>
+<body>
+   
+ <div class="clock">
+  <div class="hour">
+      <div class="hr" id="hr"></div>
+  </div> 
+      <div class="min">
+        <div class="mn" id="mn"></div>
+        </div>
+        <div class="sec">
+            <div class="sc" id="sc"></div>
+  </div>   
+ </div> 
+ <div class="box"><a>ANALOG &nbsp; CLOCK</a></div>
+ <div class="developer"><h1>Developer : <a id="link" href="https://linktr.ee/vishal215">VISHAL</a></h1></div>
+
+
+ <script>
+     const deg = 6;
+     const hr = document.querySelector('#hr');
+     const mn = document.querySelector('#mn');
+     const sc = document.querySelector('#sc');
+
+     setInterval(() => {
+        
+        let d = new Date();
+        let hh = d.getHours() * 30;
+        let mm = d.getMinutes() * deg;
+        let ss = d.getSeconds() * deg;
+
+        hr.style.transform = `rotateZ(${(hh)+(mm/12)}deg)`;
+        mn.style.transform = `rotateZ(${mm}deg)`;
+        sc.style.transform = `rotateZ(${ss}deg)`;
+    })
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height:100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("images/keila-hotzel-2VyyvZns3qQ-unsplash.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+
+}
+
+.clock{
+    width: 48vmin;
+    height: 48vmin;
+    margin: 8% 15% 2% 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("images/clock.png");
+    background-size: cover;
+    border:3vmin solid #04cba781;
+    border-radius: 50%;
+    box-shadow: 0 -20px 20px rgba(12, 11, 11, 0),
+               inset 0 -20px 20px rgba(15, 8, 8, 0.642),
+               0 20px 20px rgba(14, 11, 11, 0),
+               inset 0 20px 20px rgba(12, 8, 8, 0.385);
+               background-color: #db7e9d;
+              
+}
+.clock:before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+.clock .hour,
+.clock .min,
+.clock .sec{
+    position: absolute;
+
+}
+.clock .hour, .hr{
+    width: 19vmin;
+    height: 19vmin;
+}
+.clock .min, .mn{
+    width: 25vmin;
+    height: 25vmin;
+}
+.clock .sec, .sc{
+    width: 29vmin;
+    height: 29vmin;
+}
+.hr, .mn, .sc{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr:before{
+    content: '';
+    position: absolute;
+    width: 1vmin;
+    height: 10vmin;
+    background:#ed2e42;;
+    z-index: 10;
+    border-radius: 12px 12px 0 0;
+}
+.mn:before{
+        content: '';
+        width: 0.5vmin;
+        height: 15.3vmin;
+        background: #fff ;
+        z-index: 11;
+        border-radius: 6px 6px 0 0;
+}
+.sc:before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 18vmin;
+    background: #fff;
+    z-index: 12;
+    border-radius: 6px 6px 0 0;
+}
+.box{
+    padding: 4vmin 8vmin;
+    color: #07a6b5;
+    font-size:7vmin;
+    font-family: 'Rock Salt',sans-serif;
+}
+.developer{
+    font-family: 'Rock Salt',sans-serif;
+    font-size: 1.4vmin;
+    color: #f18811;
+    align-items: flex-end;
+    padding-bottom: 2vmin;
+}
+#link:hover{
+    color: red;
+}
